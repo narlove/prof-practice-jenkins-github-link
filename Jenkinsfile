@@ -13,7 +13,7 @@ pipeline {
         }
         stage("Analysis") {
             steps {
-                echo "Using SonarQube for static code analysis, inclduing static application security testing (SAST)."
+                echo "Using SonarQube for static code analysis, including static application security testing (SAST)."
             }
         }
         stage("Security Scan") {
@@ -33,7 +33,7 @@ pipeline {
         }
         stage("Deploying to production") {
             steps {
-                echo "Pushing to teh AWS EC2 prod server."
+                echo "Pushing to the AWS EC2 prod server."
             }
         }
     }
