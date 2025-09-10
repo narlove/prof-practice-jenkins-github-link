@@ -23,7 +23,17 @@ pipeline {
         }
         stage("Deploy to staging") {
             steps {
-                echo "Deploying to staging."
+                echo "Deploying to a Amazon Web Services EC2 server."
+            }
+        }
+        stage("Integration tests on staging") {
+            steps {
+                echo "Running integration tests on the EC2 staging server. Testing API correctness using Postman."
+            }
+        }
+        stage("Deploying to production") {
+            steps {
+                echo "Pushing to teh AWS EC2 prod server."
             }
         }
     }
