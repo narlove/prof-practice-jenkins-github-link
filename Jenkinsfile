@@ -36,5 +36,11 @@ pipeline {
                 echo "Pushing to the AWS EC2 prod server."
             }
         }
+        stage("video test stage")
+        {
+            steps {
+                echo "hello!"
+            }
+        }
     }
 }
